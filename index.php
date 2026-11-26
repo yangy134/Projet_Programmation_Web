@@ -14,7 +14,12 @@ if (!$link) {
 mysqli_set_charset($link, "utf8");
 Flight::set('lien', $link);
 
-//insérer les routes
+//Les routes !!
+
+Flight::route('/', function () {
+    Flight::render('accueil');
+});
+
 
 Flight::start();
 
